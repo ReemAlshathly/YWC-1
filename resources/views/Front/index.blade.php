@@ -27,8 +27,8 @@
 <body>
     <section class="intro-section overflow-hidden" id="intro-section">
         <div class="position-relative" style="min-height: 80vh;">
-            <div id="topbar" class="d-flex align-items-center fixed-top">
-                <div class="d-flex justify-content-between container">
+            <div id="topbar" class="d-flex justify-content-between align-items-center fixed-top">
+                <div class="container d-flex justify-content-between">
                     <div class="d-flex align-items-center contact-info">
                         <i class="fa-solid fa-envelope"></i>
                         <a href="mailto:contact@example.com">contact@example.com</a>
@@ -49,48 +49,58 @@
                 </div>
             </div>
             <header id="header" class="fixed-top shadow">
-                <div class="container d-flex align-items-center">
-                    <h1 class="logo me-5">
-                        <a href="index.html">
+                <div class="container">
+                    <nav id="navbar" class="navbar navbar-expand-lg">
+                        <a class="navbar-brand logo me-5 h1" href="index.html">
                             <img src="imgs/logo.jpeg" width="50" alt="logo">
                         </a>
-                    </h1>
-                    <nav id="navbar" class="navbar order-last order-lg-0 me-auto">
-                        <ul class="d-flex align-items-center">
-                            <li>
-                                <a class="nav-link active" href="#hero">{{ __('front_static.home') }}</a>
-                            </li>
-                            <li>
-                                <a class="nav-link" href="#about">{{ __('front_static.about') }}</a>
-                            </li>
-                            <li>
-                                <a class="nav-link" href="#services">{{ __('front_static.projects') }}</a>
-                            </li>
-                            <li>
-                                <a class="nav-link" href="#services">{{ __('front_static.reports') }}</a>
-                            </li>
-                            <li>
-                                <a class="nav-link" href="#services">{{ __('front_static.events') }}</a>
-                            </li>
-                            <li>
-                                <a class="nav-link" href="#contact">{{ __('front_static.contactus') }}</a>
-                            </li>
-                        </ul>
-                        <i class="bi bi-list mobile-nav-toggle"></i>
+                        <div class="dropdown order-lg-1">
+                            <a class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                اللغات
+                            </a>
+                            <ul class="dropdown-menu">
+                                @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                    <li>
+                                        <a rel="alternate" hreflang="{{ $localeCode }}"
+                                            href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}"
+                                            class="dropdown-item">
+                                            {{ $properties['native'] }}
+                                        </a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto">
+                                <li>
+                                    <a class="nav-link active" href="#hero">{{ __('front_static.home') }}</a>
+                                </li>
+                                <li>
+                                    <a class="nav-link" href="#about">{{ __('front_static.about') }}</a>
+                                </li>
+                                <li>
+                                    <a class="nav-link" href="#services">{{ __('front_static.projects') }}</a>
+                                </li>
+                                <li>
+                                    <a class="nav-link" href="#services">{{ __('front_static.reports') }}</a>
+                                </li>
+                                <li>
+                                    <a class="nav-link" href="#services">{{ __('front_static.events') }}</a>
+                                </li>
+                                <li>
+                                    <a class="nav-link" href="#contact">{{ __('front_static.contactus') }}</a>
+                                </li>
+                            </ul>
+                            <a href="#donor" class="donor-btn me-3">
+                                تطوع
+                            </a>
+                        </div>
                     </nav>
-                    <ul>
-                        @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                            <li>
-                                <a rel="alternate" hreflang="{{ $localeCode }}"
-                                    href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                                    {{ $properties['native'] }}
-                                </a>
-                            </li>
-                        @endforeach
-                    </ul>
-                    <a href="#donor" class="donor-btn">
-                        تطوع
-                    </a>
                 </div>
             </header>
             <div class="section-divider">
