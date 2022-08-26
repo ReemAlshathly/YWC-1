@@ -174,7 +174,6 @@ section[id*="-section"]:nth-child(even) .section-title span {
 }
 
 .donor-btn {
-    margin-left: 25px;
     background: var(--third-clr);
     color: #fff !important;
     border-radius: 50px;
