@@ -56,7 +56,7 @@
                         </a>
                         <div class="dropdown order-lg-1">
                             <a class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                اللغات
+                                {{ __('front_static.lang') }}
                             </a>
                             <ul class="dropdown-menu">
                                 @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
@@ -97,7 +97,7 @@
                                 </li>
                             </ul>
                             <a href="#donor" class="donor-btn me-3">
-                                تطوع
+                                {{ __('front_static.volunteer') }}
                             </a>
                         </div>
                     </nav>
@@ -441,112 +441,75 @@
             </div>
         </div>
     </section>
-    <!-- Footer -->
     <footer class="text-center text-lg-start text-white">
         <div class="container p-4 pb-0">
             <div class="row">
                 <div class="col-md-3 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 fw-bold">
-                        عننا
+                    <h6 class="text-uppercase mb-4 fw-bold fs-4">
+                        {{ __('front_static.who_we_are') }}
                     </h6>
                     <p>
                         هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
                         حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى
                     </p>
                 </div>
-                <hr class="w-100 clearfix d-md-none">
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+                <hr class="w-100 d-md-none">
+                <div class="col-md-2 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 fw-bold fs-4">{{ __('front_static.important_links') }}</h6>
                     <p>
-                        <a class="text-white">MDBootstrap</a>
+                        <a class="text-white">link 1</a>
                     </p>
                     <p>
-                        <a class="text-white">MDWordPress</a>
+                        <a class="text-white">link 2</a>
                     </p>
                     <p>
-                        <a class="text-white">BrandFlow</a>
+                        <a class="text-white">link 3</a>
                     </p>
                     <p>
-                        <a class="text-white">Bootstrap Angular</a>
+                        <a class="text-white">link 4</a>
                     </p>
                 </div>
-                <hr class="w-100 clearfix d-md-none">
-                <!-- Grid column -->
-                <hr class="w-100 clearfix d-md-none">
-                <!-- Grid column -->
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                <hr class="w-100 d-md-none">
+                <div class="col-md-4 col-lg-3 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 fw-bold fs-4">{{ __('front_static.contactus') }}</h6>
                     <p>
-                        <i class="fas fa-home mr-3"></i>
-                        New York, NY 10012, US
+                        <i class="fa-solid fa-location-dot mr-3"></i>
+                        Yemen, Taiz
                     </p>
                     <p>
-                        <i class="fas fa-envelope mr-3"></i>
-                        info@gmail.com
+                        <i class="fa-solid fa-at mr-3"></i>
+                        example@gmail.com
                     </p>
                     <p>
-                        <i class="fas fa-phone mr-3"></i>
-                        + 01 234 567 88
+                        <i class="fa-solid fa-phone mr-3"></i>
+                        +967-777777777
                     </p>
                     <p>
-                        <i class="fas fa-print mr-3"></i>
+                        <i class="fa-brands fa-whatsapp mr-3"></i>
                         + 01 234 567 89
                     </p>
                 </div>
-                <!-- Grid column -->
-                <!-- Grid column -->
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
-                    <!-- Facebook -->
-                    <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!"
-                        role="button">
-                        <i class="fab fa-facebook-f">
-                        </i>
-                    </a>
-                    <!-- Twitter -->
-                    <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!"
-                        role="button">
-                        <i class="fab fa-twitter">
-                        </i>
-                    </a>
-                    <!-- Google -->
-                    <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!"
-                        role="button">
-                        <i class="fab fa-google">
-                        </i>
-                    </a>
-                    <!-- Instagram -->
-                    <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!"
-                        role="button">
-                        <i class="fab fa-instagram">
-                        </i>
-                    </a>
-                    <!-- Linkedin -->
-                    <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!"
-                        role="button">
-                        <i class="fab fa-linkedin-in">
-                        </i>
-                    </a>
-                    <!-- Github -->
-                    <a class="btn btn-primary btn-floating m-1" style="background-color: #333333" href="#!"
-                        role="button">
-                        <i class="fab fa-github">
-                        </i>
-                    </a>
+                <hr class="w-100 d-md-none">
+                <div class="col-md-3 col-lg-2 mx-auto my-3">
+                    <h6 class="text-uppercase mb-4 fw-bold fs-4">{{ __('front_static.followus') }}</h6>
+                    <div class="rounded-social-buttons">
+                        <a class="social-button facebook" href="https://www.facebook.com/" target="_blank">
+                            <i class="fa-brands fa-facebook text-white"></i></a>
+                        <a class="social-button twitter" href="https://www.twitter.com/" target="_blank">
+                            <i class="fa-brands fa-twitter text-white"></i></a>
+                        <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank">
+                            <i class="fa-brands fa-linkedin text-white"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-            © 2020 Copyright:
-            <a class="text-white" href="https://mdbootstrap.com/">
-                MDBootstrap.com
+            © 2022 Copyright
+            <a class="text-white" href="#">
+                YWC.com
             </a>
         </div>
-        <!-- Copyright -->
     </footer>
-    <!-- Footer -->
-    <!-- End of .container -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
