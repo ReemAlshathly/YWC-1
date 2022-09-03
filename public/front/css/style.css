@@ -505,6 +505,10 @@ section[id*="-section"]:nth-child(even) .section-title span {
     margin: 15px 0;
 }
 
+.project-footer {
+    font-size: clamp(12px, 1.1vw, 2.2rem);
+}
+
 /*======== Testimonials =========*/
 
 .testimonials-section .blockquote-custom {

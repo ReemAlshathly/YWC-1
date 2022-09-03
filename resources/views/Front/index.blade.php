@@ -352,7 +352,7 @@
                                 إذا كنت تحتاج إلى عدد أكبر من الفقرات
 
                             </p>
-                            <div class="d-flex justify-content-between">
+                            <div class="project-footer d-flex justify-content-between">
                                 <div>
                                     <i class="fa-solid fa-people-group text-primary"></i>
                                     <span class="fw-bold text-muted">50</span>
@@ -388,7 +388,7 @@
                                 إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
                                 إذا كنت تحتاج إلى عدد أكبر من الفقرات
                             </p>
-                            <div class="d-flex justify-content-between">
+                            <div class="project-footer d-flex justify-content-between">
                                 <div>
                                     <i class="fa-solid fa-people-group text-primary"></i>
                                     <span class="fw-bold text-muted">50</span>
@@ -424,7 +424,7 @@
                                 إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
                                 إذا كنت تحتاج إلى عدد أكبر من الفقرات
                             </p>
-                            <div class="d-flex justify-content-between">
+                            <div class="project-footer d-flex justify-content-between">
                                 <div>
                                     <i class="fa-solid fa-people-group text-primary"></i>
                                     <span class="fw-bold text-muted">50</span>
