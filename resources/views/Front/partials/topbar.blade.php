@@ -16,6 +16,9 @@
             <a href="#" class="linkedin">
                 <i class="fa-brands fa-linkedin"></i>
             </a>
+            <a href="#" class="youtube">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
         </div>
     </div>
 </div>

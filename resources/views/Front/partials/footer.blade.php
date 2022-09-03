@@ -1,9 +1,9 @@
-<footer class="text-center text-lg-start text-white">
+<footer class="text-center text-lg-start text-white main-footer">
     <div class="container p-4 pb-0">
         <div class="row">
             <div class="col-md-3 mx-auto mt-3">
                 <h6 class="text-uppercase mb-4 fw-bold fs-4">
-                    {{ __('front_static.who_we_are') }}
+                    {{ __('front_static.about') }}
                 </h6>
                 <p>
                     هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
@@ -56,12 +56,14 @@
                         <i class="fa-brands fa-twitter text-white"></i></a>
                     <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank">
                         <i class="fa-brands fa-linkedin text-white"></i></a>
+                    <a class="social-button youtube" href="https://www.youtube.com/" target="_blank">
+                        <i class="fa-brands fa-youtube text-white"></i></a>
                 </div>
             </div>
         </div>
     </div>
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        © 2022 Copyright
+        © 2022 {{ __('front_static.copywrite') }}
         <a class="text-white" href="#">
             YWC.com
         </a>
