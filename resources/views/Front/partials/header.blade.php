@@ -1,12 +1,12 @@
 <header id="header" class="fixed-top shadow">
     <div class="container">
         <nav id="navbar" class="navbar navbar-expand-lg">
-            <a class="navbar-brand logo me-5 h1" href="index.html">
+            <a class="navbar-brand logo mb-0 me-5 h1" href="index.html">
                 <img src="imgs/logo.jpeg" width="60" alt="logo">
             </a>
             <div class="dropdown order-lg-1">
                 <a class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    {{ __('front_static.lang') }}
+                    <i class="fa-sharp fa-solid fa-globe"></i>
                 </a>
                 <ul class="dropdown-menu">
                     @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)

@@ -21,6 +21,9 @@ Route::group(
         Route::get('/', function () {
             return view('Front.index');
         });
+        Route::get('/projects', function () {
+            return view('Front.projects');
+        });
     });
 
 
